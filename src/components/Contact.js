@@ -1,6 +1,10 @@
 import React from "react";
 
-const Contact = () => {
+const Contact = (props) => {
+  // programatically direct
+  // setTimeout(() => { 
+  //  props.history.push('/about')
+  // }, 2000)
   return (
     <div className="container">
       <h4 className="center">Contact</h4>
@@ -11,7 +15,7 @@ const Contact = () => {
         cum deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         Id commodi temporibus voluptas doloremque nihil deleniti explicabo
         officiis amet ex nostrum dolor, sequi laudantium error! Animi nobis
-        nesciunt sint labore ea! 
+        nesciunt sint labore ea!
       </p>
     </div>
   );

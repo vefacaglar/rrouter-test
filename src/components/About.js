@@ -1,4 +1,5 @@
 import React from "react";
+import Rainbow from '../hoc/Rainbow'
 
 const About = () => {
   return (
@@ -13,8 +14,9 @@ const About = () => {
         officiis amet ex nostrum dolor, sequi laudantium error! Animi nobis
         nesciunt sint labore ea! 
       </p>
+
     </div>
   );
 };
 
-export default About;
+export default Rainbow(About);

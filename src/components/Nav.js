@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Link, NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink, Link, withRouter } from 'react-router-dom';
 
 const Nav = () => {
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
-        <a className="brand-logo">Vefa Çağlar</a>
+        <Link className="brand-logo" to="/">React App</Link>
         <ul className="right">
           <li>
             <NavLink exact to="/">Home</NavLink>
@@ -22,4 +22,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default withRouter(Nav);
