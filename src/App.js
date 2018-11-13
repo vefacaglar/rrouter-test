@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Post from "./components/Post";
 import Switch from "react-router-dom/Switch";
+import Todo from "./components/Todo";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path="/post/:post_id" component={Post} />
+            <Route path='/todos' component={Todo}/>
           </Switch>
         </div>
       </BrowserRouter>
