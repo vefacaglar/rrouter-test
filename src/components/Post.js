@@ -21,20 +21,31 @@ class Post extends Component {
 
     handleClick = () => {
         this.props.deletePost(this.props.post.id)
+        this.props.history.push('/')
     }
 
     render() {
         console.log(this.props);
-
         //const post = this.state.Post;
         const post = this.props.post;
+
+        const postDetail = post ?
+            (
+                <div>
+                    <h4>{post.title}</h4>
+                    <p>{post.body}</p>
+                    <div className="center">
+                        <button className="btn red darken-4" onClick={this.handleClick}>Delete Post</button>
+                    </div>
+                </div>
+            ) :
+            (
+                <div>This post is no longer awailable.</div>
+            )
+
         return (
             <div className="container">
-                <h4>{post.title}</h4>
-                <p>{post.body}</p>
-                <div className="center">
-                    <button className="btn red darken-4" onClick={this.handleClick}>Delete Post</button>
-                </div>
+                {postDetail}
             </div>
         );
     }
